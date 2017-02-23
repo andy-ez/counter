@@ -2,4 +2,4 @@
 
 Simple rails app to output a paginated list of every number from 1-1M as an English word.
 
-Live example can be found at [HERE](https://word-counter-test.herokuapp.com)
+Live example can be found at https://word-counter-test.herokuapp.com
