@@ -8,6 +8,8 @@ class WordNumbers
     @range.map{ |number| number < 0 ? "minus " + to_words(number).downcase : to_words(number).downcase }
   end
 
+private
+
   def to_words(int)
     abs = int.abs
     return "Out of range" if abs > 1_000_000
@@ -28,9 +30,7 @@ class WordNumbers
       return "one #{base_numbers[abs]}"
     end
   end
-
-private
-
+  
   def base_numbers
     { 
       1=> "One", 
