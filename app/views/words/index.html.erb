@@ -1,0 +1,15 @@
+<main>
+  <%= form_tag('/', method: :get) do %>
+    <%= label_tag 'per_page', "Numbers Displayed Per Page:" %>
+    <%= text_field_tag 'per_page', nil, value: params[:per_page] || 1000 %>
+    <%= submit_tag 'Set' %>
+  <% end -%>
+  <ul>
+    <% @words.each do |word| %>
+      <li><%= word %></li>
+    <% end %>
+  </ul>
+  <div>
+    <%= will_paginate @words, renderer: BootstrapPagination::Rails %>
+  </div>
+</main>
